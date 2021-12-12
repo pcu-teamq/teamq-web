@@ -1,6 +1,6 @@
 CREATE DATABASE arduino;
 
-USE arduino
+USE arduino;
 
 CREATE TABLE tbl_user (
   user_name VARCHAR(20) NOT NULL,
