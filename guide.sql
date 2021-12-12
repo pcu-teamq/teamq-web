@@ -1,5 +1,7 @@
 CREATE DATABASE arduino;
 
+USE arduino
+
 CREATE TABLE tbl_user (
   user_name VARCHAR(20) NOT NULL,
   user_password VARCHAR(20) NOT NULL,
