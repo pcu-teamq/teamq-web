@@ -9,7 +9,7 @@ CREATE TABLE tbl_user (
   );
 
 CREATE TABLE board (
-  id tag(11) unsigned NOT NULL auto_increment,
+  tag INT(11) unsigned NOT NULL auto_increment,
   LOG VARCHAR(20) NULL,
   NAME VARCHAR(20) NULL,
   TIME VARCHAR(20) NULL,
@@ -18,3 +18,8 @@ CREATE TABLE board (
   );
 
 ALTER TABLE board ADD UNIQUE INDEX (TIME);
+
+-----------------USE table 초기화-----------------
+-> ALTER TABLE board ADD UNIQUE INDEX (TIME);
+-> ALTER TABLE board AUTO_INCREMENT = 0;
+-> DELETE FROM board;
