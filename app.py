@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, session, url_for, request, redirect
 import pymysql
 import pandas as pd
@@ -31,7 +30,7 @@ def post():
     
     conn = connectsql()
     cursor = conn.cursor(pymysql.cursors.DictCursor)
-    query1 = "SELECT tag, NAME, LOG, TIME, ID FROM board ORDER BY id DESC" # ORDER BY 컬럼명 DESC : 역순출력, ASC : 순차출력
+    query1 = "SELECT tag, NAME, LOG, TIME, ID FROM board ORDER BY tag DESC" # ORDER BY 컬럼명 DESC : 역순출력, ASC : 순차출력
     cursor.execute(query1)
     post_list = cursor.fetchall()
     
